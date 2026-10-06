@@ -1,0 +1,10 @@
+# Maven
+target/
+
+# Credenciales de la base de datos
+src/main/resources/config.properties
+
+# VS Code y sistema
+.vscode/
+.DS_Store
+Thumbs.db
