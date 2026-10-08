@@ -1,3 +1,6 @@
 com\shield\SecondaryController.class
 com\shield\App.class
+com\shield\utils\DBConnection.class
+com\shield\model\Rol.class
+com\shield\model\Usario.class
 com\shield\PrimaryController.class
