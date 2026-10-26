@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.shield.controller.DashboardController" styleClass="fondo">
+
+    <left>
+        <VBox spacing="6" prefWidth="220" styleClass="menu">
+            <padding>
+                <Insets top="24" right="16" bottom="24" left="16"/>
+            </padding>
+            <Label text="SHIELD" styleClass="titulo"/>
+            <Region prefHeight="16"/>
+            <Button text="Inicio" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnUsuarios" text="Usuarios" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnActivos" text="Activos" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button text="Incidencias" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnAlertas" text="Alertas" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnAuditoria" text="Auditoría" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#onLogout" maxWidth="Infinity" styleClass="menu-boton"/>
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="barra-superior">
+            <padding>
+                <Insets top="16" right="24" bottom="16" left="24"/>
+            </padding>
+            <Label fx:id="lblBienvenida" styleClass="titulo-seccion"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblRol" styleClass="etiqueta-rol"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="24">
+            <padding>
+                <Insets top="24" right="24" bottom="24" left="24"/>
+            </padding>
+            <FlowPane hgap="16" vgap="16">
+                <VBox styleClass="tarjeta-dato" prefWidth="200">
+                    <Label text="ACTIVOS" styleClass="tarjeta-titulo"/>
+                    <Label text="—" styleClass="tarjeta-numero"/>
+                </VBox>
+                <VBox styleClass="tarjeta-dato" prefWidth="200">
+                    <Label text="INCIDENCIAS ABIERTAS" styleClass="tarjeta-titulo"/>
+                    <Label text="—" styleClass="tarjeta-numero"/>
+                </VBox>
+                <VBox styleClass="tarjeta-dato" prefWidth="200">
+                    <Label text="ALERTAS" styleClass="tarjeta-titulo"/>
+                    <Label text="—" styleClass="tarjeta-numero"/>
+                </VBox>
+                <VBox styleClass="tarjeta-dato" prefWidth="200">
+                    <Label text="USUARIOS" styleClass="tarjeta-titulo"/>
+                    <Label text="—" styleClass="tarjeta-numero"/>
+                </VBox>
+            </FlowPane>
+            <Label fx:id="lblSeccion" text="Selecciona una opción del menú" styleClass="subtitulo"/>
+        </VBox>
+    </center>
+</BorderPane>

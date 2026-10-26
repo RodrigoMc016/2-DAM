@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.shield.controller.LoginController" styleClass="fondo">
+    <VBox alignment="CENTER" spacing="14" maxWidth="340" maxHeight="-Infinity" styleClass="tarjeta">
+        <padding>
+            <Insets top="32" right="32" bottom="32" left="32"/>
+        </padding>
+
+        <Label text="SHIELD" styleClass="titulo"/>
+        <Label text="Gestión de activos y seguridad" styleClass="subtitulo"/>
+
+        <VBox spacing="4">
+            <Label text="Usuario"/>
+            <TextField fx:id="txtUsuario" promptText="Tu usuario"/>
+        </VBox>
+
+        <VBox spacing="4">
+            <Label text="Contraseña"/>
+            <PasswordField fx:id="txtPassword" promptText="Tu contraseña"/>
+        </VBox>
+
+        <Label fx:id="lblError" styleClass="error" wrapText="true" visible="false" managed="false"/>
+
+        <Button fx:id="btnLogin" text="INICIAR SESIÓN" maxWidth="Infinity"
+                defaultButton="true" onAction="#onLogin" styleClass="boton-principal"/>
+    </VBox>
+</StackPane>
