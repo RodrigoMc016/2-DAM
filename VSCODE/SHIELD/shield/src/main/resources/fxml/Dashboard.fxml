@@ -14,9 +14,9 @@
             </padding>
             <Label text="SHIELD" styleClass="titulo"/>
             <Region prefHeight="16"/>
-            <Button text="Inicio" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
-            <Button fx:id="btnUsuarios" text="Usuarios" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
-            <Button fx:id="btnActivos" text="Activos" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button text="Inicio" onAction="#onInicio" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnUsuarios" text="Usuarios" onAction="#onUsuarios" maxWidth="Infinity" styleClass="menu-boton"/>
+            <Button fx:id="btnActivos" text="Activos" onAction="#onActivos" maxWidth="Infinity" styleClass="menu-boton"/>
             <Button text="Incidencias" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
             <Button fx:id="btnAlertas" text="Alertas" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
             <Button fx:id="btnAuditoria" text="Auditoría" onAction="#onMenu" maxWidth="Infinity" styleClass="menu-boton"/>
@@ -37,29 +37,31 @@
     </top>
 
     <center>
-        <VBox spacing="24">
-            <padding>
-                <Insets top="24" right="24" bottom="24" left="24"/>
-            </padding>
-            <FlowPane hgap="16" vgap="16">
-                <VBox styleClass="tarjeta-dato" prefWidth="200">
-                    <Label text="ACTIVOS" styleClass="tarjeta-titulo"/>
-                    <Label text="—" styleClass="tarjeta-numero"/>
-                </VBox>
-                <VBox styleClass="tarjeta-dato" prefWidth="200">
-                    <Label text="INCIDENCIAS ABIERTAS" styleClass="tarjeta-titulo"/>
-                    <Label text="—" styleClass="tarjeta-numero"/>
-                </VBox>
-                <VBox styleClass="tarjeta-dato" prefWidth="200">
-                    <Label text="ALERTAS" styleClass="tarjeta-titulo"/>
-                    <Label text="—" styleClass="tarjeta-numero"/>
-                </VBox>
-                <VBox styleClass="tarjeta-dato" prefWidth="200">
-                    <Label text="USUARIOS" styleClass="tarjeta-titulo"/>
-                    <Label text="—" styleClass="tarjeta-numero"/>
-                </VBox>
-            </FlowPane>
-            <Label fx:id="lblSeccion" text="Selecciona una opción del menú" styleClass="subtitulo"/>
-        </VBox>
+        <StackPane fx:id="contenido">
+            <VBox fx:id="inicio" spacing="24">
+                <padding>
+                    <Insets top="24" right="24" bottom="24" left="24"/>
+                </padding>
+                <FlowPane hgap="16" vgap="16">
+                    <VBox styleClass="tarjeta-dato" prefWidth="200">
+                        <Label text="ACTIVOS" styleClass="tarjeta-titulo"/>
+                        <Label text="—" styleClass="tarjeta-numero"/>
+                    </VBox>
+                    <VBox styleClass="tarjeta-dato" prefWidth="200">
+                        <Label text="INCIDENCIAS ABIERTAS" styleClass="tarjeta-titulo"/>
+                        <Label text="—" styleClass="tarjeta-numero"/>
+                    </VBox>
+                    <VBox styleClass="tarjeta-dato" prefWidth="200">
+                        <Label text="ALERTAS" styleClass="tarjeta-titulo"/>
+                        <Label text="—" styleClass="tarjeta-numero"/>
+                    </VBox>
+                    <VBox styleClass="tarjeta-dato" prefWidth="200">
+                        <Label text="USUARIOS" styleClass="tarjeta-titulo"/>
+                        <Label text="—" styleClass="tarjeta-numero"/>
+                    </VBox>
+                </FlowPane>
+                <Label fx:id="lblSeccion" text="Selecciona una opción del menú" styleClass="subtitulo"/>
+            </VBox>
+        </StackPane>
     </center>
 </BorderPane>

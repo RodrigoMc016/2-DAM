@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shield.controller.ActivosController" spacing="14">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Gestión de activos" styleClass="titulo-seccion"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="txtBuscar" promptText="Buscar..." prefWidth="220"/>
+        <Button text="Nuevo activo" onAction="#onNuevo" styleClass="boton-principal"/>
+    </HBox>
+
+    <TableView fx:id="tabla" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colCodigo" text="Código" minWidth="90"/>
+            <TableColumn fx:id="colTipo" text="Tipo" minWidth="90"/>
+            <TableColumn fx:id="colFabricante" text="Fabricante"/>
+            <TableColumn fx:id="colModelo" text="Modelo"/>
+            <TableColumn fx:id="colSerie" text="N.º de serie"/>
+            <TableColumn fx:id="colEstado" text="Estado" minWidth="100" maxWidth="140"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button fx:id="btnEditar" text="Editar" onAction="#onEditar" styleClass="boton-secundario"/>
+        <Button fx:id="btnEstado" text="Cambiar estado" onAction="#onCambiarEstado" styleClass="boton-secundario"/>
+        <Button fx:id="btnHistorial" text="Ver historial" onAction="#onHistorial" styleClass="boton-secundario"/>
+        <Label fx:id="lblMensaje" styleClass="subtitulo"/>
+    </HBox>
+</VBox>

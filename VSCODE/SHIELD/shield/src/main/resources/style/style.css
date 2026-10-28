@@ -105,3 +105,51 @@
     -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
+/* ===== Añadir al FINAL de tu style.css ===== */
+
+.boton-secundario {
+    -fx-background-color: #334155;
+    -fx-text-fill: #e2e8f0;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+    -fx-cursor: hand;
+}
+
+.boton-secundario:hover {
+    -fx-background-color: #475569;
+}
+
+.boton-secundario:disabled {
+    -fx-opacity: 0.4;
+}
+
+.table-view {
+    -fx-background-color: #1e293b;
+    -fx-control-inner-background: #1e293b;
+    -fx-control-inner-background-alt: #243247;
+    -fx-table-cell-border-color: #334155;
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0f172a;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #0f172a;
+    -fx-border-color: #334155;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0369a1;
+}
+
+.table-cell {
+    -fx-text-fill: #e2e8f0;
+}
